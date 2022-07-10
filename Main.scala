@@ -1,27 +1,27 @@
+
+//------------------------>Q4.b
 object Main {
   def main(args: Array[String]): Unit = {
-    var a:Int=2
-    var b:Int=3
-    var c:Int=4
-    var d:Int=5
-    val k:Float =4.3f
-    val g:Float =5.3f
-  //a
-    b-=1
-    println("Value is:"+(b*a+c*d))  //24
-    d-=1
-  //b
-    println("Value is:"+(a)) //2
-    a+=1
-  //c
-    println("Value is:"+(-2*(g-k)+c)) //2
-  //d
-    println("Value is:"+c) //4
-    c+=1
-  //e
-    c+=1
-    println("Value is:"+(c*a)) //18
-    a+=1
-
+    println("The highest profit:" + profit(25))
   }
+  def attendees(price:Int):Int={
+    return 120+(15-price)/5*20
+  }
+  def revenue(price:Int):Int={
+    return attendees(price)*price
+  }
+  def cost(price:Int):Int={
+    return 500+3*attendees(price)
+  }
+  def profit(price:Int):Int={
+    return revenue(price)-cost(price)
+  }
+    /* Ticket price is 25 ---- profit=1260
+       Ticket price is 30 ---- profit=1120
+       Ticket price is 35 ---- profit=780
+       Ticket price is 40 ---- profit=240
+
+       Ticket price is 20 ---- profit=1200
+       Ticket price is 15 ---- profit=940
+     */
 }
